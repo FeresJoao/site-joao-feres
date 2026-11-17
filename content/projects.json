@@ -1,0 +1,131 @@
+{
+  "groups": [
+    {
+      "id": "lemep",
+      "name": "LEMEP",
+      "fullName": "Laboratório de Estudos de Mídia e Esfera Pública",
+      "role": "Coordenação",
+      "line": "Mídia e esfera pública",
+      "description": "Pesquisa sobre comunicação política, formação da opinião e o papel da mídia na democracia. O laboratório reúne análises da imprensa e das redes sociais, articulando investigação acadêmica e debate público.",
+      "url": "https://lemep.iesp.uerj.br/",
+      "themes": [
+        "Comunicação política",
+        "Opinião pública",
+        "Mídia e democracia"
+      ]
+    },
+    {
+      "id": "gemaa",
+      "name": "GEMAA",
+      "fullName": "Grupo de Estudos Multidisciplinares da Ação Afirmativa",
+      "role": "Coordenação",
+      "line": "Raça e ação afirmativa",
+      "description": "Criado em 2008, o grupo investiga políticas de ação afirmativa e a representação de raça e gênero na educação, na mídia, na política e em outras esferas da vida social. Produz levantamentos e análises sobre desigualdades no Brasil.",
+      "url": "https://gemaa.iesp.uerj.br/",
+      "themes": [
+        "Ação afirmativa",
+        "Desigualdades raciais",
+        "Raça e gênero"
+      ]
+    },
+    {
+      "id": "olb",
+      "name": "OLB",
+      "fullName": "Observatório do Legislativo Brasileiro",
+      "role": "Coordenação",
+      "line": "Política e representação",
+      "description": "Pesquisa e análise sobre o Legislativo brasileiro e o comportamento parlamentar. A produção do observatório aproxima o conhecimento acadêmico do acompanhamento das instituições políticas.",
+      "url": "https://olb.org.br/",
+      "themes": [
+        "Legislativo brasileiro",
+        "Comportamento parlamentar",
+        "Representação"
+      ]
+    }
+  ],
+  "selected": [
+    {
+      "id": "monitoramento",
+      "name": "Monitorando a esfera pública",
+      "subtitle": "Desinformação e viés nas mídias tradicionais e redes sociais",
+      "period": "Registro iniciado em 2024",
+      "description": "Continuação das atividades do Manchetômetro, com análise de conteúdos da imprensa e das redes sociais. O projeto combina análise de conteúdo, análise de valência e ferramentas de codificação assistida por inteligência artificial.",
+      "source": "Currículo Lattes · projeto de pesquisa"
+    },
+    {
+      "id": "tres-ps",
+      "name": "Proyecto 3Ps",
+      "subtitle": "Populismo, polarización y posverdad",
+      "period": "Participação · registro iniciado em 2023",
+      "description": "Rede internacional dedicada ao estudo do populismo, da polarização e da pós-verdade na comunicação digital. O núcleo brasileiro, sediado no IESP–UERJ, analisa a polarização afetiva e a comunicação populista nas eleições de 2018 e 2022.",
+      "source": "Currículo Lattes · projeto de pesquisa"
+    },
+    {
+      "id": "inct",
+      "name": "Instituto da Democracia e da Democratização da Comunicação",
+      "subtitle": "INCT · pesquisa em rede",
+      "period": "Participação no comitê gestor · 2018–2024",
+      "description": "Projeto multicêntrico sobre democracia brasileira, opinião pública e organização da mídia. João Feres Júnior participou do comitê gestor entre 2018 e 2024. Essa trajetória tem continuidade no INCT ID-ICED, atualmente sob sua coordenação.",
+      "source": "Currículo Lattes · participação no comitê gestor em 2018–2024; continuidade institucional conforme o site do INCT ID-ICED."
+    },
+    {
+      "id": "raca-voto",
+      "name": "Raça e Voto 2022",
+      "subtitle": "Relações raciais e preferências eleitorais",
+      "period": "Concluído · 2022",
+      "description": "Pesquisa qualitativa sobre a interação entre raça e preferências políticas e eleitorais. Foram realizados 40 grupos focais on-line, distribuídos por oito capitais brasileiras.",
+      "source": "Currículo Lattes · projeto de pesquisa"
+    },
+    {
+      "id": "iberconceptos",
+      "name": "Iberconceptos",
+      "subtitle": "História conceitual comparada do mundo ibero-americano",
+      "period": "Concluído · 2005–2012",
+      "description": "Coordenação de estudos coletivos sobre conceitos políticos e sociais no Brasil, em duas fases de investigação. O trabalho integra a trajetória de pesquisa em história dos conceitos.",
+      "source": "Currículo Lattes · fases 1 e 2 do projeto"
+    },
+    {
+      "id": "authenticity",
+      "name": "Historical Authenticity",
+      "subtitle": "Populismo e reivindicações de autenticidade",
+      "period": "Concluído · 2017–2022",
+      "description": "Projeto comparativo sobre a relação entre populismo e autenticidade em diferentes contextos sociais, com estudos sobre Brasil, Índia e Ucrânia e colaboração entre pesquisadores de diferentes países e disciplinas.",
+      "source": "Currículo Lattes · projeto de pesquisa"
+    }
+  ],
+  "featured": {
+    "id": "inct-iced",
+    "name": "INCT ID-ICED",
+    "fullName": "Instituto da Democracia: Instituições, Comportamento, Esfera Pública e Diversidade",
+    "role": "Coordenação",
+    "institution": "IESP–UERJ",
+    "description": "Instituto Nacional de Ciência e Tecnologia sediado no IESP–UERJ, dedicado ao estudo dos desafios e das ameaças à democracia em perspectiva comparada. Articula instituições, comportamento político e esfera pública aos temas da inclusão e da sustentabilidade, no Brasil e na América do Sul.",
+    "homeSummary": "Sob a coordenação de João Feres Júnior, o instituto investiga os desafios da democracia, da inclusão e da sustentabilidade em perspectiva comparada.",
+    "axes": [
+      {
+        "title": "Instituições, comportamento e esfera pública",
+        "description": "Dimensões centrais da investigação sobre a democracia."
+      },
+      {
+        "title": "Gênero, raça e etnia, meio ambiente",
+        "description": "Temas transversais de inclusão e sustentabilidade."
+      },
+      {
+        "title": "Estados e regiões, Brasil e América do Sul",
+        "description": "Escalas de análise e comparação."
+      }
+    ],
+    "url": "https://feresjoao.github.io/inct-id-iced/",
+    "source": "Site do INCT ID-ICED: apresentação institucional e página Equipe; coordenação e prioridade confirmadas pelo autor.",
+    "sourceUrls": [
+      "https://feresjoao.github.io/inct-id-iced/sobre.html",
+      "https://feresjoao.github.io/inct-id-iced/equipe.html"
+    ]
+  },
+  "researchThemes": [
+    {
+      "id": "teoria",
+      "name": "Conceitos e democracia"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+const params=new URLSearchParams(location.search);
+let version=params.get('versao')==='2'?'2':'1';
+let size=params.get('tela')==='celular'?'mobile':'desktop';
+const preview=document.querySelector('#preview');
+function update(navigate=true){document.querySelectorAll('[data-version]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.version===version)));document.querySelectorAll('[data-size]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.size===size)));document.querySelector('#frame').classList.toggle('mobile',size==='mobile');const title=version==='1'?'livro e publicações':'pesquisa e projetos';preview.title=`Proposta ${version}: ${title}, prévia navegável`;if(navigate)preview.src=`versao-${version}.html`;document.querySelector('#open-page').href=`versao-${version}.html`;document.querySelector('#frame-title').textContent=`joão feres júnior / ${title}`;document.querySelector('#hierarchy').textContent=version==='1'?'01 · O livro abre a conversa. As publicações recentes vêm a seguir, acompanhadas de um perfil breve.':'02 · As linhas de pesquisa abrem a conversa. O Manchetômetro ganha destaque, seguido dos grupos e da produção acadêmica.';document.querySelector('#dimensions').textContent=size==='mobile'?'Celular · até 390 px':'Computador · largura disponível';history.replaceState(null,'',`?versao=${version}${size==='mobile'?'&tela=celular':''}`)}
+document.querySelectorAll('[data-version]').forEach(b=>b.addEventListener('click',()=>{version=b.dataset.version;update()}));
+document.querySelectorAll('[data-size]').forEach(b=>b.addEventListener('click',()=>{size=b.dataset.size;update(false)}));
+update();

@@ -1,0 +1,12 @@
+const siteEnglish=document.documentElement.lang==='en';
+const menuButton=document.querySelector('.menu-toggle');
+const navigation=document.querySelector('.nav');
+function closeMenu(){navigation.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='Menu +'}
+menuButton?.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';navigation.classList.toggle('open',open);menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?(siteEnglish?'Close −':'Fechar −'):'Menu +'});
+navigation?.addEventListener('click',event=>{if(event.target.closest('a'))closeMenu()});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navigation?.classList.contains('open')){closeMenu();menuButton.focus()}});
+document.querySelectorAll('[data-language-switch]').forEach(link=>link.addEventListener('click',()=>{const destination=new URL(link.getAttribute('href'),location.href);destination.search=location.search;destination.hash=location.hash;link.href=destination.href}));
+document.querySelectorAll('[data-publications]').forEach(section=>{const items=[...section.querySelectorAll('.publication')];const count=section.querySelector('[role=status]');section.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{section.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));let visible=0;items.forEach(item=>{item.hidden=button.dataset.filter!=='all'&&item.dataset.type!==button.dataset.filter;if(!item.hidden)visible++});count.textContent=siteEnglish?visible+' '+(visible===1?'publication in this selection':'publications in this selection'):visible+' '+(visible===1?'publicação nesta seleção':'publicações nesta seleção')}))});
+async function copyText(text,status){try{if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(text);status.textContent=siteEnglish?'Copied.':'Copiado.'}catch{status.textContent=siteEnglish?'Select the text above to copy.':'Selecione o texto acima para copiar.'}}
+document.querySelectorAll('[data-copy-reference]').forEach(button=>button.addEventListener('click',()=>{const panel=button.parentElement;copyText(panel.querySelector('[data-citation]').textContent,panel.querySelector('.copy-status'))}));
+document.querySelectorAll('[data-copy-email]').forEach(button=>button.addEventListener('click',()=>copyText(button.dataset.copyEmail,button.parentElement.querySelector('.copy-status'))));

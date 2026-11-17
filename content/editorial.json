@@ -1,0 +1,134 @@
+{
+  "profile": {
+    "name": "João Feres Júnior",
+    "role": "Professor titular de Ciência Política",
+    "institution": "IESP–UERJ",
+    "email": "jferes@iesp.uerj.br",
+    "bio": "Professor titular de Ciência Política do IESP–UERJ, onde atua desde 2010. Doutor pela City University of New York, com formação em Ciências Sociais e Filosofia pela Unicamp. Coordena o INCT ID-ICED, o GEMAA, o OLB e o LEMEP.",
+    "lattes": "http://lattes.cnpq.br/4890516395721831",
+    "orcid": "https://orcid.org/0000-0002-5830-0458",
+    "institutional": "https://iesp.uerj.br/pesquisador/joao-feres-junior/",
+    "portrait": "assets/joao-feres-atual.png",
+    "portraitSource": "fotos/3x4_Foto JFJ.png",
+    "bioPtSource": "Possui graduação em Ciências Sociais e mestrado em Filosofia pela Universidade Estadual de Campinas (1988 e 1997) e mestrado e doutorado em Ciência Política pela City University of New York, Graduate Center (1998, 2003). Foi professor de ciência política na Rutgers University (2001), no Brooklyn College (EUA) (2001-2002), no IUPERJ (2003-2010) e na UNIRIO (2010-2012). Ocupou o cargo de  editor executivo da Editora da UERJ de 2019 a 2023. Foi Secretário Nacional de Análise, Estratégia e Articulação (SEART) da Secretaria de Comunicação da Presidência da República (2023). É atualmente professor titular de ciência política do Instituto de Estudos Sociais e Políticos (IESP), da UERJ, onde atua desde 2010. É coordenador do GEMAA - Grupo de Estudos Multidisciplinares da Ação Afirmativa (http://gemaa.iesp.uerj.br/), do Observatório do Legislativo Brasileiro (OLB), e do LEMEP - Laboratório de Estudos de Mídia e Esfera Pública -- no âmbito do qual implementa os projetos Manchetômetro, Monitor do Debate Público (MDP) e Política nas Redes (PNR). Tem publicações nas áreas de comportamento político, comunicação política, teoria democrática, teoria política, políticas de ação afirmativa, relações raciais e história dos conceitos. Além de publicações acadêmicas, produz regularmente a partir de seus grupos de pesquisa textos técnicos, boletins e textos para discussão sobre comportamento político, mídia e política, comportamento parlamentar e desigualdades raciais, além de textos ocasionais de análise política de ampla circulação.",
+    "bioEnSource": "Feres Jr. holds a bachelor's degree in Social Sciences and a master's degree in Philosophy from the State University of Campinas (1988, 1997), as well as a master's and PhD in Political Science from the Graduate Center of the City University of New York (1998, 2003). His teaching career includes appointments at Rutgers University (2001), Brooklyn College (20012002), IUPERJ (20032010), and UNIRIO (20102012). Between 2019 and early 2023, he served as the executive editor of UERJ University Press, and in 2023 he held the position of National Secretary for Analysis, Strategy, and Coordination (SEART) at Brazils Presidency Secretariat for Communication. Currently, Feres Jr. is a Full Professor of Political Science at the Institute for Social and Political Studies (IESP-UERJ), a position he has occupied since 2010. He coordinates several research initiatives, including the GEMAA (Multidisciplinary Study Group on Affirmative Action), the Brazilian Legislative Observatory (OLB), and the Laboratory for Media and Public Sphere Studies (LEMEP), which houses projects such as Manchetômetro, Public Debate Monitor (MDP), and Politics in Networks (PNR). His academic publications span political behavior, political communication, democratic theory, political theory, affirmative action policies, race relations, and conceptual history. Additionally, Feres Jr. regularly produces technical reports, policy briefs, and discussion papers addressing topics such as political behavior, politics and communication, parliamentary behavior, and racial inequalities."
+  },
+  "book": {
+    "id": "nas-ruas-2026",
+    "type": "book",
+    "year": 2026,
+    "title": "Nas ruas e fora delas",
+    "subtitle": "Junho de 2013 revisitado",
+    "authors": [
+      "João Feres Júnior"
+    ],
+    "venue": "Autêntica · Coleção Ensaios",
+    "url": "https://www.grupoautentica.com.br/produto/nas-ruas-e-fora-delas-1837",
+    "isbn": "9786559286775",
+    "pages": 344,
+    "description": "Uma investigação sobre Junho de 2013 e o papel da mídia na construção dos protestos. Evidências, análise de conteúdo e novas perguntas para compreender a política brasileira."
+  },
+  "publications": [
+    {
+      "id": "nas-ruas-2026",
+      "type": "book",
+      "year": 2026,
+      "title": "Nas ruas e fora delas",
+      "subtitle": "Junho de 2013 revisitado",
+      "authors": [
+        "João Feres Júnior"
+      ],
+      "venue": "Autêntica · Coleção Ensaios",
+      "url": "https://www.grupoautentica.com.br/produto/nas-ruas-e-fora-delas-1837",
+      "isbn": "9786559286775",
+      "pages": 344,
+      "description": "Uma investigação sobre Junho de 2013 e o papel da mídia na construção dos protestos. Evidências, análise de conteúdo e novas perguntas para compreender a política brasileira."
+    },
+    {
+      "id": "articles-2153",
+      "title": "A lógica da migração partidária: O impacto da extrema direita no Legislativo brasileiro",
+      "year": 2026,
+      "doi": "10.22456/1982-5269.152049",
+      "url": "https://doi.org/10.22456/1982-5269.152049",
+      "language": "Português",
+      "authors": [
+        "Silvana Krause",
+        "Bruno Marques Schaefer",
+        "João Feres Júnior"
+      ],
+      "venue": "Revista Debates, v. 20, p. 83–104",
+      "isbn": null,
+      "volume": "20",
+      "pages": "83–104",
+      "type": "article"
+    },
+    {
+      "id": "articles-2134",
+      "title": "O bolsonarismo como fenômeno de opinião pública",
+      "year": 2025,
+      "doi": "10.1590/1807-0191202531113",
+      "url": "https://doi.org/10.1590/1807-0191202531113",
+      "language": "Português",
+      "authors": [
+        "João Feres Júnior"
+      ],
+      "venue": "Opinião Pública, v. 31",
+      "isbn": null,
+      "volume": "31",
+      "pages": "1–23",
+      "type": "article"
+    },
+    {
+      "id": "articles-2136",
+      "title": "O Que É o Bolsonarismo? Muito Além da Abordagem Sociológica",
+      "year": 2025,
+      "doi": "10.1590/dados.2025.68.4.401",
+      "url": "https://doi.org/10.1590/dados.2025.68.4.401",
+      "language": "Português",
+      "authors": [
+        "João Feres Júnior",
+        "Carolina Almeida de Paula"
+      ],
+      "venue": "Dados, v. 68",
+      "isbn": null,
+      "volume": "68",
+      "pages": "e20250132–46",
+      "type": "article"
+    },
+    {
+      "id": "articles-2055",
+      "title": "Redefining the Communication Dynamics in Bolsonaro’s Brazil: Media Consumption and Political Preferences",
+      "year": 2024,
+      "doi": "10.3390/socsci13050245",
+      "url": "https://doi.org/10.3390/socsci13050245",
+      "language": "Inglês",
+      "authors": [
+        "João Feres Júnior",
+        "Bruno Marques Schaefer",
+        "Eduardo Barbabela"
+      ],
+      "venue": "Social Sciences, v. 13, 245",
+      "isbn": null,
+      "volume": "13",
+      "pages": "245",
+      "type": "article"
+    }
+  ],
+  "courses": [
+    {
+      "title": "A extrema direita no século XXI: impactos eleitorais, partidários e agendas políticas",
+      "term": "2026 · 2º sem.",
+      "url": "ensino.html#extrema-direita-2026"
+    },
+    {
+      "title": "Seminário de Projeto de Tese",
+      "term": "2026 · 2º sem.",
+      "url": "ensino.html#projeto-tese-2026"
+    },
+    {
+      "title": "Política brasileira",
+      "term": "2026 · 1º sem.",
+      "url": "ensino.html#politica-brasileira-2026"
+    }
+  ]
+}

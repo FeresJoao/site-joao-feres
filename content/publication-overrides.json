@@ -1,0 +1,41 @@
+{
+  "articles-1939": {
+    "published": false,
+    "reviewNote": "Título incompleto no XML: Review of. Confirmar com o autor antes de incluir."
+  },
+  "articles-2153": {
+    "authors": [
+      "Silvana Krause",
+      "Bruno Marques Schaefer",
+      "João Feres Júnior"
+    ],
+    "venue": "Revista Debates"
+  },
+  "articles-2134": {
+    "venue": "Opinião Pública"
+  },
+  "articles-2136": {
+    "authors": [
+      "João Feres Júnior",
+      "Carolina Almeida de Paula"
+    ],
+    "venue": "Dados"
+  },
+  "articles-2055": {
+    "authors": [
+      "João Feres Júnior",
+      "Bruno Marques Schaefer",
+      "Eduardo Barbabela"
+    ],
+    "venue": "Social Sciences"
+  },
+  "chapters-2085": {
+    "language": null,
+    "reviewNote": "O idioma consta como Bretão no XML. Confirmar antes de exibir."
+  },
+  "articles-2154": {
+    "doi": null,
+    "url": "https://revistas.pucsp.br/index.php/aurora/article/view/73484/51122",
+    "reviewNote": "O DOI do XML identifica o periódico, não este artigo. Usado o link específico presente no próprio XML."
+  }
+}

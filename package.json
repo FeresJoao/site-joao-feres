@@ -1,0 +1,14 @@
+{
+  "name": "joao-feres-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:public": "node scripts/build-public.mjs",
+    "start": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "check:public": "node scripts/check.mjs _site --public",
+    "import:lattes": "node scripts/import-lattes.mjs",
+    "build:prototypes": "node scripts/build-prototypes.mjs"
+  }
+}
