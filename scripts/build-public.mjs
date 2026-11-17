@@ -7,9 +7,11 @@ await import('./build.mjs');
 const output = path.resolve('_site');
 const routes = {index:'index',sobre:'about',publicacoes:'publications',pesquisa:'research',ensino:'teaching',contato:'contact',notas:'notes'};
 const configuredUrl = new URL(process.env.SITE_URL || 'https://joao.lemep.net.br/');
-if (configuredUrl.protocol !== 'https:' || configuredUrl.username || configuredUrl.password || configuredUrl.search || configuredUrl.hash) {
-  throw new Error('SITE_URL deve ser uma URL HTTPS pública, sem credenciais, consulta ou fragmento.');
+if (!['http:', 'https:'].includes(configuredUrl.protocol) || configuredUrl.username || configuredUrl.password || configuredUrl.search || configuredUrl.hash) {
+  throw new Error('SITE_URL deve ser uma URL HTTP(S) pública, sem credenciais, consulta ou fragmento.');
 }
+// O Pages pode informar HTTP enquanto o certificado do domínio é emitido.
+configuredUrl.protocol = 'https:';
 const baseUrl = configuredUrl.href.replace(/\/?$/, '/');
 const url = file => new URL(file === 'index.html' ? '' : file === 'en/index.html' ? 'en/' : file, baseUrl).href;
 const xml = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');

@@ -1,10 +1,12 @@
 # Publicação e manutenção
 
-Repositório previsto: https://github.com/FeresJoao/site-joao-feres
+Repositório: https://github.com/FeresJoao/site-joao-feres
 
 Endereço inicial do GitHub Pages: https://feresjoao.github.io/site-joao-feres/
 
-Endereço personalizado previsto: https://joao.lemep.net.br/
+Depois de cadastrar o domínio personalizado, o endereço inicial redireciona para ele; o DNS precisa estar configurado para o acesso funcionar.
+
+Endereço personalizado cadastrado no GitHub: https://joao.lemep.net.br/
 
 ## Atualizar o site
 
@@ -19,7 +21,7 @@ A pasta dist contém também as propostas de revisão. A pasta _site é gerada p
 
 ## Endereço personalizado
 
-Primeiro, em Settings → Pages do repositório, cadastre joao.lemep.net.br em Custom domain. Depois, no Registro.br, abra lemep.net.br → DNS → Configurar zona DNS e acrescente:
+O endereço joao.lemep.net.br já foi cadastrado em Settings → Pages → Custom domain. A etapa manual restante é abrir Registro.br → lemep.net.br → DNS → Configurar zona DNS e acrescentar:
 
 | Tipo | Nome | Destino |
 | --- | --- | --- |
