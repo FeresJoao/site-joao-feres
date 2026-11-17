@@ -21,7 +21,7 @@ A pasta dist contém também as propostas de revisão. A pasta _site é gerada p
 
 ## Endereço personalizado
 
-O endereço joao.lemep.net.br já foi cadastrado em Settings → Pages → Custom domain. A etapa manual restante é abrir Registro.br → lemep.net.br → DNS → Configurar zona DNS e acrescentar:
+O endereço joao.lemep.net.br foi cadastrado em Settings → Pages → Custom domain. O autor configurou a entrada abaixo no Registro.br em 17/11/2026; ela foi confirmada no servidor autoritativo e nos resolvedores públicos do Google e da Cloudflare. Para manutenção, a configuração está em Registro.br → lemep.net.br → DNS → Configurar zona DNS:
 
 | Tipo | Nome | Destino |
 | --- | --- | --- |
@@ -29,7 +29,7 @@ O endereço joao.lemep.net.br já foi cadastrado em Settings → Pages → Custo
 
 O destino não contém https:// nem o nome do repositório. Preserve os registros existentes do domínio. Se já houver registros para joao, confira seu uso antes de modificá-los.
 
-Quando o GitHub reconhecer o DNS e emitir o certificado, ative Enforce HTTPS. Execute novamente o workflow para atualizar os endereços canônicos e o sitemap. A geração utiliza a URL retornada por actions/configure-pages, funcionando tanto no endereço inicial quanto no domínio personalizado. O workflow usa publicação por Actions; um arquivo CNAME não substitui a configuração de Custom domain no GitHub.
+O certificado HTTPS é emitido automaticamente pelo GitHub após sua validação interna do DNS. Quando o certificado estiver disponível, mantenha Enforce HTTPS ativo. Execute novamente o workflow para atualizar os endereços canônicos e o sitemap. A geração utiliza a URL retornada por actions/configure-pages, funcionando tanto no endereço inicial quanto no domínio personalizado. O workflow usa publicação por Actions; um arquivo CNAME não substitui a configuração de Custom domain no GitHub.
 
 O acesso ao Registro.br deve ser feito pelo titular ou administrador autorizado. Não guarde senhas ou tokens neste repositório.
 
