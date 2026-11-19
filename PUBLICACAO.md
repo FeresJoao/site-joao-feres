@@ -17,7 +17,7 @@ Edite os arquivos de content/ conforme CONTEUDO.md. Para gerar e conferir a pré
 
 Envie as alterações ao branch main. O GitHub Actions executa a geração, confere links e correspondência entre idiomas e publica apenas a pasta _site. Não há dependências npm a instalar. Uma falha na verificação impede a publicação e mantém a versão anterior. Acompanhe a aba Actions do repositório.
 
-A pasta dist contém também as propostas de revisão. A pasta _site é gerada por scripts/build-public.mjs com uma lista explícita de páginas e arquivos públicos: 14 páginas PT/EN, imagens, biografias e os CSS/JS utilizados. Propostas antigas, fontes originais, relatórios locais e XML do Lattes ficam fora da publicação.
+A pasta dist contém também as propostas de revisão. A pasta _site é gerada por scripts/build-public.mjs com uma lista explícita de páginas e arquivos públicos: 16 páginas PT/EN, imagens, biografias e os CSS/JS utilizados. Propostas antigas, fontes originais, relatórios locais e XML do Lattes ficam fora da publicação.
 
 ## Endereço personalizado
 

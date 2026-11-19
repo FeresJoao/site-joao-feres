@@ -9,6 +9,7 @@
     "check": "node scripts/check.mjs",
     "check:public": "node scripts/check.mjs _site --public",
     "import:lattes": "node scripts/import-lattes.mjs",
-    "build:prototypes": "node scripts/build-prototypes.mjs"
+    "build:prototypes": "node scripts/build-prototypes.mjs",
+    "import:media": "node scripts/import-media.mjs"
   }
 }

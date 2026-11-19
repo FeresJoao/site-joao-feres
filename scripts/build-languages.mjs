@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 const read = name => fs.readFile('content/' + name + '.json', 'utf8').then(JSON.parse);
 const [en, editorial, courses, publications, additions] = await Promise.all(['en','editorial','courses','publications','publication-additions'].map(read));
-const routes = {index:'index',sobre:'about',publicacoes:'publications',pesquisa:'research',ensino:'teaching',contato:'contact',notas:'notes'};
+const routes = {index:'index',sobre:'about',publicacoes:'publications',pesquisa:'research',ensino:'teaching',midia:'media',contato:'contact',notas:'notes'};
 const escape = text => String(text ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const decode = text => text.replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>');
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -11,6 +11,7 @@ function translate(value) {
   if (en.strings[value] !== undefined) return en.strings[value];
   if (value.endsWith(' · João Feres Júnior')) return translate(value.slice(0,-' · João Feres Júnior'.length)) + ' · João Feres Júnior';
   if (value.endsWith(' ↓')) return translate(value.slice(0,-2)) + ' ↓';
+  if (/^\d+ registros de mídia$/.test(value)) return value.replace('registros de mídia','media records');
   if (/^\d+ publicações(?: nesta seleção)?$/.test(value)) return value.replace('publicações nesta seleção','publications in this selection').replace('publicações','publications');
   if (/^\d{4} · [12]º sem(?:estre|\.)$/.test(value)) return value.replace('1º semestre','First semester').replace('2º semestre','Second semester').replace('1º sem.','First semester').replace('2º sem.','Second semester');
   if (value.includes(' · ')) return value.split(' · ').map(part => en.strings[part] ?? part.replace('IESP–UERJ e UFRGS','IESP–UERJ and UFRGS')).join(' · ');
@@ -30,7 +31,12 @@ const support = (title,course=false) => '<p class="title-translation" lang="en">
 function englishMarkup(html) {
   const originals = [];
   const protect = fragment => { originals.push(fragment); return '<!--original-'+(originals.length-1)+'-->'; };
-  html=html.replace(/<article class="catalogue-item"[\s\S]*?<\/article>/g,article=>{
+  html=html.replace(/<article class="catalogue-item(?: media-item)?"[\s\S]*?<\/article>/g,article=>{
+    if(article.includes('class="catalogue-item media-item"')) {
+      article=article.replace(/<h2[^>]*>[\s\S]*?<\/h2>/,protect).replace(/<p class="catalogue-(?:venue|authors)">[\s\S]*?<\/p>/g,part=>part.includes('Veículo não informado')?part:protect(part));
+      article=article.replace(/<time class="media-date" datetime="([^"]+)">[^<]*<\/time>/,(_,date)=>'<time class="media-date" datetime="'+date+'">'+new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z'))+'</time>');
+      return article;
+    }
     const id=decode(article.match(/\bid="pub-([^"]+)"/)[1]), pub=pubMap.get(id), title=en.publicationTitles[id];
     const lang=languages[pub?.language] || 'pt-BR';
     article=article.replace(/<h2[^>]*>[\s\S]*?<\/h2>/,heading=>protect(originalLanguage(heading,lang))+(title?support(title):''));
@@ -95,4 +101,4 @@ for(const [slug,englishSlug] of Object.entries(routes)){
   await fs.writeFile('dist/'+slug+'.html',languageNavigation(pt,slug,false));
 }
 await fs.writeFile('dist/assets/minibio-joao-feres-en.txt',en.shortBio+'\n\nContact: '+editorial.profile.email+'\nSource: author-supplied Lattes CV, updated 16 November 2026; book details from Autêntica; INCT ID-ICED website.\n');
-console.log('7 English pages generated; PT/EN navigation added to all 14 current pages.');
+console.log('8 English pages generated; PT/EN navigation added to all 16 current pages.');

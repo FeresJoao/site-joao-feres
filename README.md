@@ -6,7 +6,7 @@ A página inicial adota a versão 1, escolhida pelo autor, com o livro Nas ruas 
 
 Dê duplo clique em dist/index.html para abrir a página principal no navegador. O site usa arquivos estáticos e caminhos relativos. Os links para DOI, editoras e instituições precisam de conexão à internet.
 
-Páginas: index.html, sobre.html, publicacoes.html, pesquisa.html, ensino.html e contato.html. Fontes e lacunas: notas.html. As duas propostas originais continuam em comparar.html.
+Páginas: index.html, sobre.html, publicacoes.html, pesquisa.html, ensino.html, midia.html e contato.html. Fontes e lacunas: notas.html. As duas propostas originais continuam em comparar.html.
 
 Para abrir por HTTP local, com Node.js:
 
@@ -28,12 +28,15 @@ Consulte CONTEUDO.md para exemplos. Os arquivos JSON usam UTF-8.
 - content/publication-overrides.json: correções por identificador aplicadas ao importar o XML.
 - content/projects.json: grupos e projetos selecionados.
 - content/courses.json: disciplinas e cursos.
+- content/media.json: entrevistas, participações e textos na imprensa importados do Lattes.
+- content/media-additions.json e content/media-overrides.json: novos registros e correções preservados na importação.
 
 A busca, filtros por tipo e ano, cópia de referências e carregamento progressivo funcionam no navegador. Não há serviço externo de busca nem formulário de envio de mensagens. Contato usa links de e-mail.
 
 ## Importar uma atualização do currículo
 
     npm run import:lattes
+    npm run import:media
     npm run build
     npm run check
 
@@ -59,6 +62,6 @@ O histórico reúne 17 registros de cursos, incluindo nove entradas de 2022 a 20
 
 ## Português e inglês
 
-O seletor PT/EN está no cabeçalho das sete páginas atuais. A versão inglesa começa em dist/en/index.html; as demais páginas são about.html, publications.html, research.html, teaching.html, contact.html e notes.html. As duas versões compartilham 190 publicações e 17 registros de cursos, além das imagens e estilos. A troca mantém a página correspondente, a âncora e os filtros do catálogo.
+O seletor PT/EN está no cabeçalho das oito páginas atuais. A versão inglesa começa em dist/en/index.html; as demais páginas são about.html, publications.html, research.html, teaching.html, media.html, contact.html e notes.html. As duas versões compartilham 190 publicações e 17 registros de cursos, além das imagens e estilos. A troca mantém a página correspondente, a âncora e os filtros do catálogo.
 
 As traduções ficam em content/en.json. Consulte CONTEUDO.md para atualizar textos e acrescentar registros. A geração e a verificação são feitas com npm run build e npm run check.

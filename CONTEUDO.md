@@ -65,3 +65,9 @@ As páginas principais usam a mesma estrutura e os mesmos registros em portuguê
 Após a edição, execute npm run build e npm run check. Confira também as novas traduções nas páginas em inglês; textos sem uma entrada no dicionário permanecem no original.
 
 Temas de pesquisa sem grupo institucional próprio ficam em researchThemes, separados de groups, em content/projects.json. São apresentados apenas como rótulos no índice de temas, sem seção descritiva própria e sem integrar a lista de grupos e observatórios.
+
+## Na mídia
+
+`content/media.json` reúne os campos públicos importados do Lattes. Execute `node scripts/import-media.mjs` para atualizar a partir do XML local; o XML nunca é publicado. `media-overrides.json` preserva correções por ID e `media-additions.json` recebe novos registros manuais com a mesma estrutura. Três duplicatas exatas foram ocultadas por ajuste editorial.
+
+A página abre com entrevistas e participações. O filtro oferece também artigos e colunas. Podcasts só recebem essa classificação quando identificados na fonte. Os títulos e veículos são preservados nos dois idiomas. Datas inválidas ou em conflito com o ano são omitidas; links ausentes não são inventados. Os registros de sites desenvolvidos não são aparições na mídia e ficaram fora do catálogo.

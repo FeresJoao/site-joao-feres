@@ -5,7 +5,7 @@ import path from 'node:path';
 await import('./build.mjs');
 
 const output = path.resolve('_site');
-const routes = {index:'index',sobre:'about',publicacoes:'publications',pesquisa:'research',ensino:'teaching',contato:'contact',notas:'notes'};
+const routes = {index:'index',sobre:'about',publicacoes:'publications',pesquisa:'research',ensino:'teaching',midia:'media',contato:'contact',notas:'notes'};
 const configuredUrl = new URL(process.env.SITE_URL || 'https://joao.lemep.net.br/');
 if (!['http:', 'https:'].includes(configuredUrl.protocol) || configuredUrl.username || configuredUrl.password || configuredUrl.search || configuredUrl.hash) {
   throw new Error('SITE_URL deve ser uma URL HTTP(S) pública, sem credenciais, consulta ou fragmento.');
@@ -41,4 +41,4 @@ for (const file of assets) await fs.copyFile(path.join('dist', file), path.join(
 await fs.writeFile(path.join(output, '.nojekyll'), '');
 await fs.writeFile(path.join(output, 'robots.txt'), 'User-agent: *\nAllow: /\n\nSitemap: ' + new URL('sitemap.xml', baseUrl).href + '\n');
 await fs.writeFile(path.join(output, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + sitemap.join('\n') + '\n</urlset>\n');
-console.log('Publicação preparada em _site: 14 páginas PT/EN. Endereço: ' + baseUrl);
+console.log('Publicação preparada em _site: 16 páginas PT/EN. Endereço: ' + baseUrl);

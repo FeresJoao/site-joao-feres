@@ -23,3 +23,13 @@ html{scroll-behavior:auto}
 @media(max-width:800px){.research-highlight{grid-template-columns:1fr;gap:12px;padding:23px;margin-bottom:25px}.institute-feature h2{font-size:36px}.institute-feature .feature-fullname{font-size:21px}.institute-feature .method-step strong{font-size:20px}.secondary-project{margin-bottom:30px}.secondary-project h2{font-size:32px}}
 
 @media(max-width:800px){.section-index a:last-child:nth-child(odd){grid-column:1/-1}}
+
+/* Media catalogue uses the publication archive's editorial grid. */
+.media-catalogue{padding-bottom:48px}.media-catalogue .catalogue-controls{grid-template-columns:minmax(0,2fr) minmax(240px,1.2fr) minmax(100px,.7fr) auto}.media-catalogue .catalogue-controls label,.media-catalogue .clear-filters,.media-catalogue .catalogue-meta,.media-catalogue .pub-type,.media-catalogue .missing-link,.media-catalogue .source-note{font-size:14px}.media-catalogue .catalogue-controls input,.media-catalogue .catalogue-controls select{font-size:16px}.media-catalogue select{appearance:none;padding-right:30px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%233b3d36' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}.media-date{display:block;font-family:var(--sans);font-size:14px;margin-top:8px;color:var(--muted);white-space:nowrap}.media-item .catalogue-venue{font-size:16px;line-height:1.6;margin-top:12px}.media-item .catalogue-authors{font-size:14px}.media-item .text-link{font-size:14px}.media-contact{margin-top:20px;font-size:14px}.media-item h2{overflow-wrap:anywhere}
+@media(min-width:1001px){.header-inner>.nav a{font-size:14px;white-space:nowrap}.header-inner>.nav{gap:16px}}
+@media(min-width:1001px) and (max-width:1160px){.header-inner{flex-wrap:wrap;padding-block:18px;gap:15px}.header-controls{order:2;margin-left:auto}.header-inner>.nav{order:3;flex-basis:100%;margin:0;justify-content:space-between;border-top:1px solid var(--line);padding-top:10px}}
+@media(max-width:1000px){.media-catalogue .catalogue-controls{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}}
+@media(max-width:800px){.media-date{display:inline-block;margin:0 0 0 12px}.media-item .catalogue-year{font-size:16px}.media-catalogue .catalogue-meta{font-size:14px}.media-catalogue .catalogue-meta span{max-width:45%}}
+@media(max-width:360px){.media-catalogue .catalogue-controls{grid-template-columns:1fr}}
+
+@media(max-width:600px){.media-catalogue .catalogue-controls>div:nth-child(2){grid-column:1/-1}.media-catalogue .clear-filters{justify-self:end}}

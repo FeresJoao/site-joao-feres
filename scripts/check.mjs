@@ -2,14 +2,15 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 const root=path.resolve(process.argv[2] || 'dist');
 const publicBuild=process.argv.includes('--public');
-const routes={index:'index',sobre:'about',publicacoes:'publications',pesquisa:'research',ensino:'teaching',contato:'contact',notas:'notes'};
+const routes={index:'index',sobre:'about',publicacoes:'publications',pesquisa:'research',ensino:'teaching',midia:'media',contato:'contact',notas:'notes'};
 const files=[];
 async function walk(dir){for(const entry of await fs.readdir(dir,{withFileTypes:true})){const file=path.join(dir,entry.name);if(entry.isDirectory())await walk(file);else if(entry.name.endsWith('.html'))files.push(file)}}
 await walk(root);
 const failures=[];let total=0;
+const isEnglishPage=file=>path.relative(root,file).startsWith('en'+path.sep);
 const cache=new Map(await Promise.all(files.map(async file=>[file,await fs.readFile(file,'utf8')])));
 if(publicBuild){
-  if(files.length!==14)failures.push('Public build must contain exactly 14 current HTML pages');
+  if(files.length!==Object.keys(routes).length*2)failures.push('Public build must contain all current PT/EN HTML pages');
   for(const [file,html] of cache){
     const name=path.relative(root,file);
     if(/noindex|comparar\.html|versao-[12]\.html|class="review-link"/.test(html))failures.push(name+': preview content in public build');
@@ -48,6 +49,22 @@ for(const [pt,en] of Object.entries(routes)){
     if(JSON.stringify(citations(left))!==JSON.stringify(citations(right)))failures.push('Original citations changed in translation');
     const indexes=html=>[...html.matchAll(/data-search="([^"]*)"/g)].map(m=>m[1]);
     if(JSON.stringify(indexes(left))!==JSON.stringify(indexes(right)))failures.push('Search indexes differ between languages');
+  }
+  if(pt==='midia'){
+    const records=JSON.parse(await fs.readFile('content/media.json','utf8'));
+    const additions=JSON.parse(await fs.readFile('content/media-additions.json','utf8'));
+    const expected=[...new Map([...records,...additions].map(x=>[x.id,x])).values()].filter(x=>x.published!==false);
+    const ids=html=>[...html.matchAll(/<article class="catalogue-item media-item" id="media-([^"]+)"/g)].map(m=>m[1]);
+    if(JSON.stringify(ids(left))!==JSON.stringify(ids(right)))failures.push('Media records differ between languages');
+    if(ids(left).length!==expected.length || expected.some(x=>!ids(left).includes(x.id)))failures.push('Media archive omits or repeats source records');
+    const titles=html=>[...html.matchAll(/<h2 lang="[^"]+">([\s\S]*?)<\/h2>/g)].map(m=>m[1]);
+    if(JSON.stringify(titles(left))!==JSON.stringify(titles(right)))failures.push('Media titles changed in translation');
+    for(const x of expected){
+      if(x.url && (!/^https?:\/\//.test(x.url) || new URL(x.url).username || new URL(x.url).password))failures.push('Invalid media URL: '+x.id);
+      if(x.date && (+x.date.slice(0,4)!==x.year || new Date(x.date).toISOString().slice(0,10)!==x.date))failures.push('Invalid media date: '+x.id);
+      if(/[\u0080-\u009f]|&(?:amp|quot);/.test(x.title+' '+x.venue))failures.push('Undecoded media text: '+x.id);
+    }
+    for(const [file,html] of cache)if(!/versao-|comparar/.test(file) && !html.includes(isEnglishPage(file)?'href="media.html"':'href="midia.html"'))failures.push('Missing media navigation: '+file);
   }
   if(pt==='ensino'){
     const ids=html=>[...html.matchAll(/<article id="([^"]+)"/g)].map(m=>m[1]);
